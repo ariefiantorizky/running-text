@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Codystar&family=Creepster&family=Monoton&family=Montserrat&family=Nosifer&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+::selection {
+    background: none;
+}
+
+/* 
+font-family: 'Bebas Neue', cursive;
+font-family: 'Codystar', cursive;
+font-family: 'Creepster', cursive;
+font-family: 'Monoton', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nosifer', cursive;
+*/
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(233, 229, 229, 0.2);
+}
+
+/* CLASS FONT */
+.bebas-neue {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.codystar {
+    font-family: 'Codystar', cursive;
+}
+
+.creepster {
+    font-family: 'Creepster', cursive;
+}
+
+.monoton {
+    font-family: 'Monoton', cursive;
+}
+
+.nosifer {
+    font-family: 'Nosifer', cursive;
+}
+
+/* CLASS FONT */
+
+.title {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.title h1 {
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-bottom: 12px;
+    color: #1A202C;
+}
+
+.title h1 span {
+    font-family: 'Codystar', cursive;
+    font-weight: 800;
+}
+
+.setup-input {
+    width: 400px;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.input input {
+    width: 400px;
+    height: 60px;
+    padding: 12px;
+    background: none;
+    outline: none;
+    border: 1px solid #1A202C;
+    border-radius: 5px;
+}
+
+.setup-font {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+    margin: 20px auto;
+}
+
+.setup-font button {
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #1A202C;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.setup-font select {
+    width: 100%;
+    padding: 7px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.356);
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.setup-font select option {
+    font-size: 16px;
+}
+
+.output {
+    width: 70%;
+    height: 250px;
+    background: #1A202C;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    margin-top: 2rem;
+    /* transition: all 0.3s ease-in-out; */
+    /* overflow: hidden; */
+}
+
+#running-text {
+    width: 2000px;
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: #fff;
+    /* animation: run 8s linear infinite; */
+}
+
+/* @keyframes run {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+} */
+
+.output button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    padding: 8px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+.output button#rotate {
+    right: 60px;
+}
+
+.output button img {
+    width: 100%;
+}
+
+button:disabled,
+select:disabled {
+    opacity: 0.5;
+    cursor: no-drop;
+}
+
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.loading {
+    width: 35px;
+    height: 35px;
+    border: 7px solid rgba(0, 0, 0, 0.6);
+    border-top: 7px solid #fff;
+    border-right: 7px solid white;
+    border-radius: 100%;
+    margin: auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

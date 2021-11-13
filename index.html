@@ -1,0 +1,52 @@
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="running text, teks berjalan">
+    <title>Running Text</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="title">
+        <h1>running <span>text</span></h1>
+        <p>The next modern running text generation</p>
+    </div>
+
+    <div class="setup-input">
+        <div class="input">
+            <input type="text" name="input" id="text" placeholder="Please, input your text here!">
+        </div>
+        <div class="setup-font">
+            <button id="btn-text">Submit</button>
+            <select name="font" id="font-change">
+                <option selected disabled>Change Your Font</option>
+                <option value="bebas-neue" class="bebas-neue">Bebas Neue</option>
+                <option value="codystar" class=" codystar">Codystar</option>
+                <option value="creepster" class="creepster">Creepster</option>
+                <option value="monoton" class="monoton">Monoton</option>
+                <option value="nosifer" class="nosifer">Nosifer</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="output hidden">
+        <marquee behavior="scroll" direction="left" scrollamount="15" id="running-text">
+            <!-- value akan muncul disini -->
+        </marquee>
+
+        <button id="expand">
+            <img src="expand.png" alt="">
+        </button>
+        <button id="rotate">
+            <img src="mobile-rotate-rotation.png" alt="">
+        </button>
+    </div>
+    <div class="loading hidden"></div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
