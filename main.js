@@ -5,7 +5,9 @@ const font = document.getElementById("font-change");
 const fullscreen = document.getElementById("expand");
 const output = document.querySelector(".output");
 const rotate = document.getElementById("rotate");
-const loading = document.querySelector(".loading")
+const loading = document.querySelector(".loading");
+const closePopup = document.getElementById("close-popup");
+const popup = document.querySelector(".pop-up")
 
 // text.oninput = function () {
 //     marquee.innerHTML = text.value;
@@ -23,9 +25,13 @@ const loading = document.querySelector(".loading")
 button.setAttribute("disabled", "disable");
 font.setAttribute("disabled", "disable");
 
+
+
 text.oninput = function () {
 
-    if (text.value.length > 5) {
+    if (text.value == "") {
+        button.setAttribute("disabled", "disable");
+    } else if (text.value.length > 5) {
         font.removeAttribute("disabled");
     } else if (text.value.length < 5) {
         font.setAttribute("disabled", "disable");
@@ -67,11 +73,9 @@ fullscreen.addEventListener("click", function () {
 let mobileRotate = "rotate";
 
 rotate.addEventListener("click", function () {
-    if (mobileRotate == "no-rotate") {
-        output.style.transform = `rotate(0deg)`;
-        mobileRotate = "rotate";
-    } else if (mobileRotate == "rotate") {
-        output.style.transform = `rotate(90deg)`;
-        mobileRotate = "no-rotate";
-    }
+    popup.classList.remove("hidden");
+})
+
+closePopup.addEventListener("click", function () {
+    popup.classList.add("hidden");
 })

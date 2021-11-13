@@ -263,9 +263,10 @@ select:disabled {
     height: 60px;
     padding: 8px;
     position: fixed;
-    top: 0;
+    top: 10px;
     right: 10px;
     border-radius: 3px;
+    transition: all 0.3s ease-in-out;
 }
 
 .github img {
@@ -277,6 +278,42 @@ select:disabled {
     background-color: #fff;
     width: 40px;
     height: 40px;
+}
+
+.pop-up {
+    width: 300px;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.pop-up button {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 3px 10px;
+    border-radius: 3px;
+    background: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.fullscreen~.pop-up button {
+    top: -50px;
+    right: -50px;
+    background-color: #fff;
 }
 
 @keyframes spin {
