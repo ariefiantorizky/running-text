@@ -62,8 +62,26 @@ font.onchange = function () {
 
 }
 
+// FULLSCREEN
+function getFullScreenElement() {
+    return document.fullscreenElement ||
+        document.webkitFullScreenElement ||
+        document.mozFullScreenElement ||
+        document.msFullScreenElement
+}
+
+function toggleFullScreen() {
+    if (getFullScreenElement()) {
+        document.exitFullscreen();
+    } else {
+        output.requestFullscreen().catch(console.log);
+    }
+}
+
+
 fullscreen.addEventListener("click", function () {
-    output.classList.toggle("fullscreen")
+    // output.classList.toggle("fullscreen");
+    toggleFullScreen();
 })
 
 // rotate.addEventListener("click", function () {
